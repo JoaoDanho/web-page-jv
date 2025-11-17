@@ -40,6 +40,6 @@ jobs:
           echo "${{ secrets.SSHKEY }}" > chave.pem
           ls -l
           chmod 600 chave.pem
-          ssh -o "StrictHostKeyChecking no" -i chave.pem gestor@51.103.120.236 "sudo apt update"; "sudo apt install apache2"
+          ssh -o "StrictHostKeyChecking no" -i chave.pem gestor@51.103.120.236 "sudo apt update; sudo apt install apache2"
           #scp -i chave.pem gestor51.103.120.236:/index.html /var/www/html/index.html
           ls -l
